@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 
 const userSchema = new db.Schema({
   email: String,
-  password: String
+  password: String,
 }, { timestamps: true });
 
 userSchema.pre('save', async function () {

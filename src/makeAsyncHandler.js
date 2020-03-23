@@ -1,6 +1,6 @@
 /**
- * 
- * @param {(req, res) => Promise<void>} handler 
+ *
+ * @param {(req, res) => Promise<void>} handler
  */
 export default handler => async (req, res, next) => {
   try {

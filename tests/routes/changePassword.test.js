@@ -51,14 +51,14 @@ describe('changePassword route handler', () => {
       .rejects
       .toMatchObject({ code: 404 });
   });
-  
+
   test('should respond with 202 on success', async () => {
     await changePassword(req, res);
 
     expect(res.status)
       .toHaveBeenCalledWith(202);
   });
-  
+
   test('should respond with dto in body', async () => {
     await changePassword(req, res);
     user = await User.findOne({ _id: user._id });

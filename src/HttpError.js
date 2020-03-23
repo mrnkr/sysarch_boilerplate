@@ -4,4 +4,4 @@ export default (code, message, ...args) => {
     message,
     args,
   };
-}
+};

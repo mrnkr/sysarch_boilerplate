@@ -33,7 +33,6 @@ describe('createUser route handler', () => {
       .rejects
       .toMatchObject({ code: 403 });
   });
-  
 
   test('should respond with 200 on success', async () => {
     await getCurrentUser(req, res);
@@ -41,7 +40,7 @@ describe('createUser route handler', () => {
     expect(res.status)
       .toHaveBeenCalledWith(200);
   });
-  
+
   test('should respond with dto in body', async () => {
     await getCurrentUser(req, res);
 

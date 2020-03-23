@@ -25,7 +25,7 @@ describe('createUser route handler', () => {
       body: {
         email: 'xmr.nkr@hotmail.com',
         password: 'patata2',
-      }
+      },
     };
     res = {
       status: jest.fn(),
@@ -70,7 +70,6 @@ describe('createUser route handler', () => {
       .rejects
       .toMatchObject({ code: 401 });
   });
-  
 
   test('should respond with 200 on success', async () => {
     await login(req, res);
@@ -78,7 +77,7 @@ describe('createUser route handler', () => {
     expect(res.status)
       .toHaveBeenCalledWith(200);
   });
-  
+
   test('should respond with token in body', async () => {
     await login(req, res);
     const { token } = res.json.mock.calls[0][0];

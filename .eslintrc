@@ -22,7 +22,7 @@
         "node/no-unpublished-import": "off",
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
-        "no-trailing-spaces": ["error", "always"],
-        "comma-dangle": ["error", "always"]
+        "no-trailing-spaces": "error",
+        "comma-dangle": ["error", "always-multiline"]
     }
 }

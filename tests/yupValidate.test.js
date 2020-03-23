@@ -15,7 +15,7 @@ describe('yupValidate middleware', () => {
     expect(nextFn)
       .toHaveBeenCalledWith();
   });
-  
+
   test('should call next with validation error', async () => {
     const middleware = yupValidate({ schema, key: 'body' });
     const req = { body: { name: 'not_an_email' } };

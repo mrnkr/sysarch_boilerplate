@@ -7,4 +7,4 @@ export default ({ schema, key }) => async (req, _, next) => {
   } catch (err) {
     next(HttpError(400, 'Schema validation failed', err));
   }
-}
+};

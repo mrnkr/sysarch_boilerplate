@@ -27,7 +27,7 @@ describe('async handler hof', () => {
     const handler = jest.fn(() => Promise.reject(err));
     const asyncHandler = makeAsyncHandler(handler);
     const nextFn = jest.fn();
-    await asyncHandler({}, {}, nextFn)
+    await asyncHandler({}, {}, nextFn);
 
     expect(nextFn)
       .toHaveBeenCalledWith(err);

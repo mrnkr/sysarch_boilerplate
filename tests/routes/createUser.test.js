@@ -41,7 +41,7 @@ describe('createUser route handler', () => {
     expect(res.status)
       .toHaveBeenCalledWith(201);
   });
-  
+
   test('should respond with dto in body', async () => {
     await createUser(req, res);
     const user = await User.findOne({ email: 'xmr.nkr@mailinator.com' });

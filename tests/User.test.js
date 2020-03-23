@@ -8,7 +8,7 @@ describe('User model', () => {
   test('should have a module', () => {
     expect(User).toBeDefined();
   });
-  
+
   test('should expose a toDto method', () => {
     expect(User.prototype.toDto).toBeDefined();
   });
@@ -46,7 +46,7 @@ describe('User model', () => {
     await user.save();
     expect(user.password).not.toEqual('patata2');
   });
-  
+
   test('should recognize right password', async () => {
     const user = new User({
       email: 'test@test.com',
