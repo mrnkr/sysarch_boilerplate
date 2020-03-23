@@ -10,6 +10,9 @@ cd sysarch_boilerplate
 npm i # se puede usar yarn
 ```
 
+Luego pídanme un `.env` y péguenlo en la carpeta del proyecto.
+Recuérden que hay que instalar mongodb y el servicio mongod debe estar funcionando.
+
 ### Cómo correr los tests
 
 ```bash
