@@ -13,7 +13,7 @@ userSchema.pre('save', async function () {
 
 userSchema.methods.comparePasswords = function(password) {
   return bcrypt.compare(password, this.password);
-}
+};
 
 userSchema.methods.toDto = function() {
   return {
@@ -22,6 +22,6 @@ userSchema.methods.toDto = function() {
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
   };
-}
+};
 
 export default db.model('User', userSchema);

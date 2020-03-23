@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon -r dotenv/config --exec babel-node src/index.js",
-    "lint": "eslint src"
+    "lint": "eslint src & eslint tests",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
@@ -28,15 +29,33 @@
     "@babel/core": "^7.8.7",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
+    "@types/jest": "^25.1.4",
     "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-node": "^11.0.0",
     "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "mongodb-memory-server": "^6.4.1",
     "nodemon": "^2.0.2",
     "source-map-support": "^0.5.16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint"
+      "pre-commit": "yarn run lint && yarn run test"
     }
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js)?$",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ]
   }
 }

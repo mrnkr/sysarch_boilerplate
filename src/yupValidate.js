@@ -5,6 +5,6 @@ export default ({ schema, key }) => async (req, _, next) => {
     await schema.validate(req[key]);
     next();
   } catch (err) {
-    next(HttpError(400, err));
+    next(HttpError(400, 'Schema validation failed', err));
   }
 }

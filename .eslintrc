@@ -1,7 +1,8 @@
 {
     "extends": [
         "eslint:recommended",
-        "plugin:node/recommended"
+        "plugin:node/recommended",
+        "plugin:jest/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2020,
@@ -17,6 +18,11 @@
         "node/prefer-global/url": ["error", "always"],
         "node/prefer-promises/dns": "error",
         "node/prefer-promises/fs": "error",
-        "node/no-unsupported-features/es-syntax": "off"
+        "node/no-unsupported-features/es-syntax": "off",
+        "node/no-unpublished-import": "off",
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-trailing-spaces": ["error", "always"],
+        "comma-dangle": ["error", "always"]
     }
 }
